@@ -1,0 +1,20 @@
+Collaboration Project – Connect 4 (Python)
+
+Goal: Get comfortable with Github and working in a group setting. Create a simple connect 4 game with two players.
+
+Input/Data (Ric):
+-	Data set for Input should be different from GUI
+-	Responsible for making a data structure
+-	Making data structure (putting all the pieces into place)
+-	Game consists of two players
+-	Create a function that returns the most recent position
+-	Use object-oriented programming
+
+GUI/Output (frame by frame feel) (Jonathan):
+-	Game output shown in console
+-	Clear console and re-print the board every time a move is made
+-	Make a bounce animation	
+-	Use tabs/literal characters to format the spacing
+
+Algorithm (Dylan and Alain):
+-	Matching algorithm (Whether or not the 4 blocks are connected)
