@@ -1,1 +1,2 @@
-# Dylans shit
+import numpy as np
+
