@@ -7,7 +7,10 @@ print(board)
 """JonathanIsHere"""
 
 """Ricc"""
+def getBoard():
+    return board
 
 """Alain"""
+
 
 """Dylan"""
