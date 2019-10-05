@@ -9,6 +9,8 @@ Input/Data (Ric):
 -	Game consists of two players
 -	Create a function that returns the most recent position
 -	Use object-oriented programming
+	
+	*Takes old board, registers input and drops ball in
 
 GUI/Output (frame by frame feel) (Jonathan):
 -	Game output shown in console
@@ -16,5 +18,9 @@ GUI/Output (frame by frame feel) (Jonathan):
 -	Make a bounce animation	
 -	Use tabs/literal characters to format the spacing
 
+	*Function takes new board, and compares to old then prints the animations
+
 Algorithm (Dylan and Alain):
 -	Matching algorithm (Whether or not the 4 blocks are connected)
+
+	*Algorithm to find a connection line
