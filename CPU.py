@@ -3,7 +3,10 @@ import numpy as np
 
 class AI:
     def __init__(self,_team):
-        """ Creates important variables and internal 'best place to go' map """
+        """
+            Creates important variables and internal 'best place to go' map
+            :param team of CPU:
+        """
         self.turn = 1
         self.team = _team
         self.playerteam = 1 if self.team == 2 else 2
@@ -18,8 +21,11 @@ class AI:
         self.map = np.flip(self.map)
 
     def check(self):
-        """ Checks to see which column has the highest value placement"""
-        """ Returns pos[value, x, y]"""
+        """
+            Checks to see which column has the highest value placement
+            :return pos[value, x, y]:
+        """
+
         tboard = self.map
         recorded = np.array([0,0,0])
         for xx,row in enumerate(tboard):
@@ -36,8 +42,11 @@ class AI:
         return recorded
 
     def updatemap(self,pos,turn):
-        """ Updates the internal map of best place to go """
-        """ Takes pos[v,x,y] and whose turn it is as parameters """
+        """
+            Updates the internal map of best place to go
+            :param pos[v,x,y]:
+            :param who's turn:
+        """
 
         xx = pos[1]
         yy = pos[2]
@@ -89,7 +98,12 @@ class AI:
             """
 
     def play(self,_board):
-        """ Chooses a column to go based on the board given and current decision map """
+        """
+            Chooses a column to go based on the board given and current decision map
+            :param state of board:
+            :return decision to go:
+        """
+
         self.board = _board             # Updates board
         position = self.check()         # Check for best position to go
 
