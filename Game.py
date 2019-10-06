@@ -24,9 +24,8 @@ if __name__ == "__main__":
             _in = int(input("In:"))
             if gamemode == 2: cpu.updatemap([0,_in, -1],1)
 
-        oldBoard = board.copy()
         board = dt.update(_in, player, board)    # Updates the board to user's input, returns new board
-        go.boardAni(oldBoard, board)
+        go.printGuiBoard(board)
 
         #print(board)
         _y = dt.returnY()  # Returns the y of the most recent dropped in piece

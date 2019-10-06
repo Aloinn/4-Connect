@@ -36,7 +36,6 @@ def read(oldB, newB):
         for x in range(0, 7):  # looping columns
             if oldB[y, x] != newB[y, x]:
                 change = [y, x, newB[y, x]]
-                print("here")
     return change  # change[0] = row, change[1] = column, change[2] = player
 
 
@@ -60,20 +59,18 @@ def printGuiBoard(board):
     print(boardShell.format(*getComp(board)))  # formats the list into the board shell
 
 
-def boardAni(oldB, newB):
+def boardAni(oldB, change):
     """
     Animates the player piece as it falls into place
     :param oldB: old board (before)
-    :param newB: new board (after)
+    :param change: new board (after)
     :return:
     """
-    change = read(oldB, newB)
     yLimit = change[0]
     column = change[1]
     playerUnit = change[2]
     for i in range(0, yLimit + 1):  # reprint the game board until it reaches its limit
         oldB[i, column] = playerUnit
-        # os.system('cls')
         print("\n" * 100)  # Using this until i find a way to actually clear the screen in pycharm
         printGuiBoard(oldB)
         if i != yLimit:
@@ -86,4 +83,4 @@ def boardAni(oldB, newB):
 # result1 = np.zeros((6, 7))
 # result2 = np.zeros((6, 7))
 # result2[5, 3] = 1
-# boardAni(result1, result2)
+# boardAni(result1, read(result1, result2))
