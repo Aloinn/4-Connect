@@ -1,5 +1,6 @@
 import numpy as np
 
+yVal = 5
 def update(xVal, player, board):
     """"""
     """Update function. Update the user's input, returns board. Function also sends 'yVal' to returnY(yVal).
@@ -30,10 +31,9 @@ def update(xVal, player, board):
             yVal = yVal - 1  #Decreases y value (as mentioned in description) to check whether the coordinate is empty.
             check = True
 
-    returnY(yVal) #Sends yVal over to the returnY(yVal) function
     return board  #returns the board back to Game.py
 
-def returnY(yVal): #Returns the y Value
+def returnY(): #Returns the y Value
     return yVal
 
 
