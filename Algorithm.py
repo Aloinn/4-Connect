@@ -54,8 +54,106 @@ def check(player, board):
                 counter = 0
             if counter == 4:
                 return True
+    # bottom left to top right check
+    for i in range(4):
+        if board[3 - i, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(3, 7):
+        if board[8 - i, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(5):
+        if board[4 - i, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(2, 7):
+        if board[7 - i, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(6):
+        if board[5 - i, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(1, 7):
+        if board[6 - i, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    # bottom right to top left check
+    for i in range(4):
+        if board[i + 2, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(4):
+        if board[i, i + 3] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(5):
+        if board[i + 1, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(5):
+        if board[i, i + 2] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(6):
+        if board[i, i] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
+    for i in range(6):
+        if board[i, i + 1] == player:
+            counter += 1
+        else:
+            counter = 0
+        if counter == 4:
+            return True
+
     # no 4 in a row
     return False
 
 
-print(check(1, test(0)))
+print(check(1, test(3)))
